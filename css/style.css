@@ -1,0 +1,133 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    background-image: url(file:///D:/desktop/eva3/img/background-1939128_1280.webp);
+    background-attachment: fixed;
+    color: white;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-image: url(file:///D:/desktop/eva3/img/bcc.jpg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+form {
+    margin: 20px 0;
+}
+
+form .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+form .form-check-label {
+    font-size: 0.9rem;
+    margin-left: -25px;
+}
+
+form .form-check-input {
+    margin-right: 5px;
+}
+
+form .text-danger {
+    color: red;
+    font-size: 0.8rem;
+}
+
+form .btn {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+form .btn:hover {
+    background-color: #0056b3;
+}
+
+.submit-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo personalizado para el checkbox */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Añadimos centrado horizontal */
+    cursor: pointer;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .checkmark {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.custom-checkbox .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.custom-checkbox input:checked ~ .checkmark::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.custom-checkbox .checkmark::after {
+    display: none;
+}
+
+.custom-checkbox:hover .checkmark {
+    background-color: #e6e6e6;
+}
+
+.custom-checkbox input:disabled ~ .checkmark {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Estilo para el mensaje del checkbox */
+.custom-checkbox .form-check-label {
+    margin: 0;
+}
